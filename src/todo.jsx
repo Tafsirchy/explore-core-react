@@ -60,13 +60,28 @@
 
 
 // conditional rendering: 6 variable
+// export default function ToDo({task, isDone, time}) {
+
+//     const displayTime = time ? time : 70;
+//     let listItem;
+
+//    if (isDone) {
+//     listItem = <li>Task: {task} <br/> Time: {displayTime} ✅</li>
+//    }
+//    else {
+//     listItem = <li>{task} ❌</li>
+//    }
+
+//    return listItem
+// }
+
 export default function ToDo({task, isDone, time}) {
 
-    const displayTime = time ? time : 70;
+    // const displayTime = time ? time : 70;
     let listItem;
 
    if (isDone) {
-    listItem = <li>Task: {task} <br/> Time: {displayTime} ✅</li>
+    listItem = <li>Task: {task} <br/> Time: {time ? 'I am done' : 'Not done yet'} ✅</li>
    }
    else {
     listItem = <li>{task} ❌</li>

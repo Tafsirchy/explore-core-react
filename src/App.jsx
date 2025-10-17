@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <h1>React Core Concept</h1>
-      <ToDo task="Learn React" isDone={true}></ToDo>
+      <ToDo task="Learn React" isDone={true} time=""></ToDo>
       <ToDo task="Revised JS" 
             isDone={false} 
             time={time}></ToDo>
