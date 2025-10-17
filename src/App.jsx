@@ -1,13 +1,21 @@
 
 import './App.css'
+import ToDo from './todo'
 
 function App() {
-  
+  const time = 50;
 
   return (
     <>
       <h1>React Core Concept</h1>
-      <Person></Person>
+      <ToDo task="Learn React" isDone={true}></ToDo>
+      <ToDo task="Revised JS" 
+            isDone={false} 
+            time={time}></ToDo>
+      <ToDo task="Take a shower" 
+            isDone={true} 
+            time={time}></ToDo>
+      {/* <Person></Person>
       <Student></Student>
       <Developer name="Tafsir" tech="JS"></Developer>
       <Developer name="Sagor" tech="python"></Developer>
@@ -17,7 +25,7 @@ function App() {
       <Device name="Watch" price="2000"></Device>
       <Salami event="Rojar Eid" taka="2000"></Salami>
       <Salami event="A+ Paichi" taka="2000"></Salami>
-      <Salami event="A+ Paichi" ></Salami>
+      <Salami event="A+ Paichi" ></Salami> */}
 
       {/* <Person></Person>
       <MyPet></MyPet>
@@ -65,7 +73,7 @@ function Developer({name, price}) {
   )
 }
 
-function Salami({event, taka = "1000"}) {
+function Salami({event, taka = "0"}) {
   const salamiStyle = {
     border: "2px solid green",
     borderRadius: "20px",
