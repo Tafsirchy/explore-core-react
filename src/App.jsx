@@ -15,6 +15,9 @@ function App() {
       <Device name="Laptop" price="50000"></Device>
       <Device name="Mobile" price="35000"></Device>
       <Device name="Watch" price="2000"></Device>
+      <Salami event="Rojar Eid" taka="2000"></Salami>
+      <Salami event="A+ Paichi" taka="2000"></Salami>
+      <Salami event="A+ Paichi" ></Salami>
 
       {/* <Person></Person>
       <MyPet></MyPet>
@@ -47,16 +50,34 @@ function Person() {
   )
 }
 
-function Developer(props) {
-  console.log(props);
+// const {name, tech} = {name: "Tafsir", age: 30, tech: "JS"}
+
+function Developer({name, price}) {
+  // console.log(props);
   return (
   <div style={{
         border: "2px solid saffron",
         borderRadius: "20px",
       }}>
-    <h4>Developer: {props.name} </h4>
-    <p>Technology: {props.tech} </p>
+    <h4>Developer: {name} </h4>
+    <p>Technology: {price} </p>
   </div>
+  )
+}
+
+function Salami({event, taka = "1000"}) {
+  const salamiStyle = {
+    border: "2px solid green",
+    borderRadius: "20px",
+    margin: "20px",
+    padding: "20px"
+  }
+  return (
+    <div style={salamiStyle}>
+      <h2>Amar Salami Daw</h2>
+      <h3>Salami For: {event} </h3>
+      <p>Amount: {taka} </p>
+    </div>
   )
 }
 
@@ -82,7 +103,7 @@ function Student() {
   )
 }
 
-function Sports() {
+function Sports() { 
   return (
     <div>
       <h2>Cricket</h2>
