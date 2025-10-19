@@ -41,7 +41,7 @@
   color: #888;
 }
 
-.student {
+.student, .singer {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 10px;
