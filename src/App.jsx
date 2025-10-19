@@ -3,6 +3,7 @@ import './App.css'
 import ToDo from './ToDo';
 import Actor from './Actor';
 import Singer from './Singer';
+import Library from './Library';
 
 
 function App() {
@@ -16,17 +17,26 @@ function App() {
     { id: 3, name: 'Arijit Singh', age: 35 },
   ];
 
+  const books = [
+    { id: 1, name: 'JavaScript', price: 500 },
+    { id: 2, name: 'React', price: 300 },
+    { id: 3, name: 'Node', price: 400 },
+    { id: 4, name: 'MongoDB', price: 200 },
+  ]
+
   return (
     <> 
       <h1>React Core Concept</h1>
       
-      {
+      {/* {
         actors.map(actor => <Actor actor={actor}></Actor>)
-      }
+      } */}
 
-      {
+      {/* {
         singers.map(singer => <Singer key={singer.id} singer={singer}></Singer>)
-      }
+      } */}
+
+      <Library books={books}></Library>
 
       {/* <ToDo task="Learn React" isDone={true} time=""></ToDo>
       <ToDo task="Revised JS" 
